@@ -19,7 +19,19 @@ supervised learning model using a local machine, but results from running the tr
 
 ### Results
 
-The results of the prediction task were encouraging: we were able to achieve a model with perfect precision. But we also discovered its recall ability was pretty weak, leaving room for improvement. In particular, the best next step from here could be to go back to the feature engineering phase and try to get more context from the user actions. Maybe we could extract more info from the particular pages visited before churning, or maybe the fact that the user paid or not for the service is also a strong indicator.
+A Supervised Machine Learning model was successfully crafted to predict user churn from the following features extracted:
+
+- `number_sessions`: Total amount of sessions
+- `seconds_since_genesis`: Total amount of seconds since first appearance
+- `avg_actions_per_session`: Average amount of actions per session
+- `avg_seconds_per_session`: Average amount seconds spent per session
+
+The results from training and validating the model using the large dataset were encouraging: we were able to achieve an accuracy of 0.80
+and an F1-score of 0.47.
+
+As a good next step, it might be worth going back to the feature engineering phase. Maybe is possible to extract more info from the pages
+visited by the user before churning, or maybe the fact that the user paid or not for the service is also a strong indicator. But for the
+purpose of this work, I would call this a successful first iteration!
 
 ## What's on this repository?
 

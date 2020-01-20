@@ -55,6 +55,11 @@ You could also choose to download the large 12GB dataset, but at that point is r
 sh download_datasets.sh --large
 ```
 
+## Running on AWS
+
+Refer to [this instructions](./aws_setup.md) for steps required to upload the notebook into your personal AWS account and running it with
+the help of an EMR cluster.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

@@ -23,7 +23,7 @@ Use the following command to download the small 128MB version of the sample data
 sh download_datasets.sh
 ```
 
-You could also choose to download the large 20GB dataset, but at that point is recommended to use a distributed Spark cluster before trying to run any Spark logic on it:
+You could also choose to download the large 12GB dataset, but at that point is recommended to use a distributed Spark cluster before trying to run any Spark logic on it:
 
 ```bash
 sh download_datasets.sh --large

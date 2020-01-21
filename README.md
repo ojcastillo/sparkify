@@ -15,7 +15,7 @@ want to use this dataset to try to predict if an user will churn in the near fut
 Predicting churn is a challenging and common problem that data scientists and analysts regularly encounter in any customer-facing business. Additionally, the ability to efficiently manipulate large datasets with Spark is one of the highest-demand skills in the field of data.
 
 This work shows how [pyspark](https://pypi.org/project/pyspark/) can be used to craft a machine learning model for predicting user churn.
-The work shows how the the medium sized dataset can be used just so the features needed can be crafted and to gain confidence in the
+The work also shows how the the medium sized dataset can be used just so the features needed can be crafted and to gain confidence in the
 supervised learning model using a local machine, but results from running the training and evaluation pipeline on the large dataset using
 [AWS EMR](https://aws.amazon.com/emr/) are shared as well.
 
@@ -28,12 +28,12 @@ A Supervised Machine Learning model was successfully crafted to predict user chu
 - `avg_actions_per_session`: Average amount of actions per session
 - `avg_seconds_per_session`: Average amount seconds spent per session
 
-The results from training and validating the model using the large dataset were encouraging: we were able to achieve an accuracy of 0.80
+The results from training and validating the model using the large dataset were encouraging: it achieved an accuracy of 0.80
 and an F1-score of 0.47.
 
-As a good next step, it might be worth going back to the feature engineering phase. Maybe is possible to extract more info from the pages
-visited by the user before churning, or maybe the fact that the user paid or not for the service is also a strong indicator. But for the
-purpose of this work, I would call this a successful first iteration!
+As a good next step, it might be worth going back to the feature engineering phase. Maybe is possible to extract more info 
+from the pages visited by the user before churning, or maybe the fact that the user paid or not for the service is also a 
+strong indicator. 
 
 ## What's on this repository?
 
@@ -63,7 +63,8 @@ Use the following command to download the small 128MB version of the sample data
 sh download_datasets.sh
 ```
 
-You could also choose to download the large 12GB dataset, but at that point is recommended to use a distributed Spark cluster before trying to run any Spark logic on it:
+You could also choose to download the large 12GB dataset, but at that point is recommended to use a distributed Spark cluster 
+before trying to run any Spark logic on it:
 
 ```bash
 sh download_datasets.sh --large

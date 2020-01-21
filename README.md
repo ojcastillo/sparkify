@@ -2,7 +2,9 @@
 
 > *This project was completed to satisfy the requirements of the [Data Scientist Nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025) and is meant to be educational in nature.*
 
-**Link to blog posts: [Part 1](https://medium.com/@jcm.orlando/predicting-user-churn-with-pyspark-part-1-f13befbf04c3)**
+**Link to blog posts**: [Part 1](https://medium.com/@jcm.orlando/predicting-user-churn-with-pyspark-part-1-f13befbf04c3), 
+[Part 2](https://medium.com/@jcm.orlando/predicting-user-churn-with-pyspark-part-2-90874e6807bd),
+[Part 3](https://medium.com/@jcm.orlando/predicting-user-churn-with-pyspark-part-3-89536234fa79)
 
 Sparkify is a fictional service similar to [Spotify](https://en.wikipedia.org/wiki/Spotify). At a high level, users can come and play
 songs from a large pool of artists either as a guest or as a logged-in user. They can also decide to pay for the service for more

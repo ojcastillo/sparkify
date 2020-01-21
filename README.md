@@ -28,12 +28,24 @@ A Supervised Machine Learning model was successfully crafted to predict user chu
 - `avg_actions_per_session`: Average amount of actions per session
 - `avg_seconds_per_session`: Average amount seconds spent per session
 
-The results from training and validating the model using the large dataset were encouraging: it achieved an accuracy of 0.80
-and an F1-score of 0.47.
+The results from training and validating the model using the large dataset were encouraging. The following metrics were obtained when applying the model to a random 20% of the dataset left for validation:
 
-As a good next step, it might be worth going back to the feature engineering phase. Maybe is possible to extract more info 
-from the pages visited by the user before churning, or maybe the fact that the user paid or not for the service is also a 
-strong indicator. 
+- **Accuracy**: 0.8034
+- **Precision**: 0.5958
+- **Recall**: 0.3947
+- **F1 Score**: 0.4748
+
+The high accuracy and precision levels obtained indicate to me that the model built a consistent profile for a certain kind group of users that churn: the ones that haven't used the platform as much. But the not so high recall tells me we're missing out on capturing the behavior of other kinds of users that decide to churn.
+
+#### Potential Next Steps
+
+As a good next step, it might be worth going back to the feature engineering phase. Maybe is possible to extract more info
+from the pages visited by the user before churning, or maybe the fact that the user paid or not for the service is also a
+strong indicator.
+
+After that, using a larger EMR cluster and/or working harder on optimizing the code might unlock the ability to evaluate multiple Machine
+Learning models in parallel. For example, pyspark provides support for Support Vector Machines which can usually extract capture complex
+non-linear patterns in the data.
 
 ## What's on this repository?
 
@@ -63,7 +75,7 @@ Use the following command to download the small 128MB version of the sample data
 sh download_datasets.sh
 ```
 
-You could also choose to download the large 12GB dataset, but at that point is recommended to use a distributed Spark cluster 
+You could also choose to download the large 12GB dataset, but at that point is recommended to use a distributed Spark cluster
 before trying to run any Spark logic on it:
 
 ```bash

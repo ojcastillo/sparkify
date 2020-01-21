@@ -19,17 +19,14 @@ Follow these steps to get you started:
         - Number of instance: 3
         - EC2 key pair: Proceed without an EC2 key pair or feel free to use one you created if you'd like
         - You can keep the remaining default settings and click "Create cluster" on the bottom right
-            - If you enabled logging, then update the `EMR_DefaultRole` beforehand so it can has full access to the S3 bucket provided
     - Once you create the cluster, you'll see a status next to your cluster name that says "Starting". Wait a short time for this status to
     change to "Waiting" before moving on to the next step.
 1. Now that you launched your cluster successfully, let's work on uploading the notebook for execution:
-    - First create a new role that has both the `AmazonElasticMapReduceEditorsRole` and `AmazonS3FullAccess` policies attached. Let's
-    assume the name of the role created is `EMR_Notebooks`.
     - Select "Notebooks" in the menu on the left, and click the "Create notebook" button
     - Configure your notebook:
         - Use the name `sparkify_notebook`. You could use a separate name, but it makes thing easier if you match the name of the file you're gonna be uploading.
         - Select "Choose an existing cluster" and choose the cluster you just created
-        - Provide the role `EMR_Notebooks` in "AWS service role"
+        - Use the default setting for "AWS service role" - this should be "EMR_Notebooks_DefaultRole" or "Create default role" if you haven't done this before.
     - Wait for the Notebook to reach the "Ready" Status, then click on `Open in JupyterLab`
     - In the left panel, click the "Upload Files" icon on the top and select the [sparkify_notebook.ipynb](./sparkify_notebook.ipynb) file
     on this repo. If you used the same name then it will ask to overwrite, which you should confirm.
